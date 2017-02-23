@@ -18,12 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-        let config = ParseClientConfiguration { (config: ParseMutableClientConfiguration) in
-            config.applicationId =  "CodePath-Parse"
-            config.server = "http://45.79.67.127:1337/parse"
-        }
-        
-        Parse.initialize(with: config)
+        Parse.initialize(with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) in
+            configuration.applicationId = "CodePath-Parse"
+            configuration.server = "http://45.79.67.127:1337/parse"
+        }))
+
         return true
     }
 
