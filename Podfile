@@ -4,7 +4,7 @@
 target 'ParseChat' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-	pod 'Parse', '~> 1.13.0'
+	pod 'Parse'
   # Pods for ParseChat
 
 end
