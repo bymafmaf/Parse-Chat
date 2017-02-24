@@ -22,6 +22,8 @@ class LoginVC: UIViewController {
                 alertController.show(self, sender: nil)
             } else {
                 self.user = user!
+                
+                self.performSegue(withIdentifier: "mainNavVCSegue", sender: self)
             }
         }
     }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		908595C529E798E0EAC79791 /* Pods_ParseChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9854ADD30275222E029BD17E /* Pods_ParseChat.framework */; };
+		D24BDF811E5FA84F00829D5E /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24BDF801E5FA84F00829D5E /* ChatVC.swift */; };
+		D24BDF831E5FB35C00829D5E /* ChatCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24BDF821E5FB35C00829D5E /* ChatCellView.swift */; };
 		D26F99A51E5E6D47000DC324 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F99A41E5E6D47000DC324 /* LoginVC.swift */; };
 		D2C902331E5E6CC3002D95A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C902321E5E6CC3002D95A1 /* AppDelegate.swift */; };
 		D2C902381E5E6CC3002D95A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C902361E5E6CC3002D95A1 /* Main.storyboard */; };
@@ -19,6 +21,9 @@
 		67CED8A8F60C587EF9C4E34C /* Pods-ParseChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParseChat/Pods-ParseChat.release.xcconfig"; sourceTree = "<group>"; };
 		9854ADD30275222E029BD17E /* Pods_ParseChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4ACBBA4F508C80E3BB967F /* Pods-ParseChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParseChat/Pods-ParseChat.debug.xcconfig"; sourceTree = "<group>"; };
+		D24BDF7F1E5FA75600829D5E /* ParseChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ParseChat.entitlements; sourceTree = "<group>"; };
+		D24BDF801E5FA84F00829D5E /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		D24BDF821E5FB35C00829D5E /* ChatCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCellView.swift; sourceTree = "<group>"; };
 		D26F99A41E5E6D47000DC324 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		D2C9022F1E5E6CC3002D95A1 /* ParseChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C902321E5E6CC3002D95A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,12 +83,15 @@
 		D2C902311E5E6CC3002D95A1 /* ParseChat */ = {
 			isa = PBXGroup;
 			children = (
+				D24BDF7F1E5FA75600829D5E /* ParseChat.entitlements */,
 				D2C902321E5E6CC3002D95A1 /* AppDelegate.swift */,
 				D2C902361E5E6CC3002D95A1 /* Main.storyboard */,
 				D2C902391E5E6CC3002D95A1 /* Assets.xcassets */,
 				D2C9023B1E5E6CC3002D95A1 /* LaunchScreen.storyboard */,
 				D2C9023E1E5E6CC3002D95A1 /* Info.plist */,
 				D26F99A41E5E6D47000DC324 /* LoginVC.swift */,
+				D24BDF801E5FA84F00829D5E /* ChatVC.swift */,
+				D24BDF821E5FB35C00829D5E /* ChatCellView.swift */,
 			);
 			path = ParseChat;
 			sourceTree = "<group>";
@@ -125,6 +133,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = VMBY3VYW4U;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -212,6 +225,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D24BDF831E5FB35C00829D5E /* ChatCellView.swift in Sources */,
+				D24BDF811E5FA84F00829D5E /* ChatVC.swift in Sources */,
 				D2C902331E5E6CC3002D95A1 /* AppDelegate.swift in Sources */,
 				D26F99A51E5E6D47000DC324 /* LoginVC.swift in Sources */,
 			);
@@ -337,6 +352,7 @@
 			baseConfigurationReference = CD4ACBBA4F508C80E3BB967F /* Pods-ParseChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ParseChat/ParseChat.entitlements;
 				DEVELOPMENT_TEAM = VMBY3VYW4U;
 				INFOPLIST_FILE = ParseChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -351,6 +367,7 @@
 			baseConfigurationReference = 67CED8A8F60C587EF9C4E34C /* Pods-ParseChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ParseChat/ParseChat.entitlements;
 				DEVELOPMENT_TEAM = VMBY3VYW4U;
 				INFOPLIST_FILE = ParseChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
